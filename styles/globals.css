@@ -329,28 +329,42 @@ html.dark .card {
 }
 */
 
-:root {
-  /* 你可以微调这四个值 */
-  --outer-light:  #f3f0f7;  /* 亮色外层：浅灰紫 */
-  --outer-dark:   #2d2b33;  /* 暗色外层：偏亮的深灰紫（不发黑） */
-  --content-light:#ffffff;  /* 亮色内容/卡片 */
-  --content-dark: #101015;  /* 暗色内容/卡片：近黑但不死黑 (#0f0f14/#111 也行) */
+/* ========== 亮色模式 ========== */
+
+/* 页面整体外层背景 */
+#theme-hexo {
+  background-color: #f3f0f7 !important; /* 柔和浅灰紫 */
 }
 
-/* 亮色模式 */
-#theme-hexo { background-color: var(--outer-light) !important; }
-/* 让中间容器透明，只保留外层与卡片两层 */
-#wrapper, #wrapper main { background-color: transparent !important; }
-/* 内容区与卡片同色 */
-.article, .card { background-color: var(--content-light) !important; }
-
-/* 暗色模式 */
-html.dark #theme-hexo { background-color: var(--outer-dark) !important; }
-html.dark #wrapper, html.dark #wrapper main { background-color: transparent !important; }
-html.dark .article, html.dark .card { background-color: var(--content-dark) !important; }
-
-/*（可选）暗色下让卡片更有层次感 */
-html.dark .article, html.dark .card {
-  border: 1px solid rgba(255,255,255,.06);
-  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+/* 主要内容区域透明（只显示卡片层） */
+#wrapper,
+#wrapper main {
+  background-color: transparent !important;
 }
+
+/* 卡片、文章区域白色底 */
+.article,
+.card {
+  background-color: #ffffff !important;
+}
+
+
+/* ========== 暗色模式 ========== */
+
+/* 整个页面外层底色：稍亮的深灰紫，不要太黑 */
+html.dark #theme-hexo {
+  background-color: #2f2b36 !important; /* 推荐值，也可尝试 #312e38 或 #35313f */
+}
+
+/* 中间内容层透明（让外层底色透出） */
+html.dark #wrapper,
+html.dark #wrapper main {
+  background-color: transparent !important;
+}
+
+/* 文章与卡片部分：纯黑底，统一视觉 */
+html.dark .article,
+html.dark .card {
+  background-color: #000000 !important;
+}
+
