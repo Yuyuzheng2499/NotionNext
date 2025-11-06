@@ -298,3 +298,25 @@ img {
   @keyframes l1 {
   0% {background-position: right}
 }
+
+/* ========== 全局背景色修正 ========== */
+
+/* 亮色模式 */
+#theme-hexo,
+#wrapper,
+#wrapper main {
+  background-color: #f3f0f7 !important; /* 柔和浅紫灰，与卡片区配合自然 */
+}
+
+/* 暗色模式 */
+html.dark #theme-hexo,
+html.dark #wrapper,
+html.dark #wrapper main {
+  background-color: #2a2734 !important; /* 柔和紫灰底色，不是纯黑 */
+}
+
+/* 保证内部内容不被再次覆盖 */
+.article,
+.card {
+  background-color: inherit;
+}
