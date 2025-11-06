@@ -324,7 +324,7 @@ img {
 
 /* 整个页面外层底色：稍亮的深灰紫，不要太黑 */
 html.dark #theme-hexo {
-  background-color: #2f2b36 !important; /* 推荐值，也可尝试 #312e38 或 #35313f */
+  background-color: #2f3136 !important; /* 推荐值，也可尝试 #312e38 或 #35313f */
 }
 
 /* 中间内容层透明（让外层底色透出） */
