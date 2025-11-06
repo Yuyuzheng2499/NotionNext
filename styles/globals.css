@@ -301,22 +301,28 @@ img {
 
 /* ========== 全局背景色修正 ========== */
 
-/* 亮色模式 */
-#theme-hexo,
-#wrapper,
-#wrapper main {
-  background-color: #f3f0f7 !important; /* 柔和浅紫灰，与卡片区配合自然 */
+/* ========== 深色模式布局优化 ========== */
+
+/* 外层背景：比黑色亮一点的深灰紫 */
+html.dark #theme-hexo {
+  background-color: #2d2b33 !important; /* 建议色，可根据偏好调成 #312e38 或 #3a3640 */
 }
 
-/* 暗色模式 */
-html.dark #theme-hexo,
+/* 文章内容区域 & 卡片统一为黑色底 */
 html.dark #wrapper,
-html.dark #wrapper main {
-  background-color: #2a2734 !important; /* 柔和紫灰底色，不是纯黑 */
+html.dark #wrapper main,
+html.dark .article,
+html.dark .card {
+  background-color: #000000 !important; /* 保持一致的黑色底 */
 }
 
-/* 保证内部内容不被再次覆盖 */
+/* 亮色模式（保持原样） */
+#theme-hexo {
+  background-color: #f3f0f7 !important;
+}
+#wrapper,
+#wrapper main,
 .article,
 .card {
-  background-color: inherit;
+  background-color: #ffffff !important;
 }
